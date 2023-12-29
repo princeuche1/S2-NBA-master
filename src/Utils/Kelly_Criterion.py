@@ -2,7 +2,7 @@ def american_to_decimal(american_odds):
     """
     Converts American odds to decimal odds (European odds).
     """
-    if american_odds >= 100:
+    if american_odds is not None and american_odds >= 100:
         decimal_odds = (american_odds / 100)
     else:
         decimal_odds = (100 / abs(american_odds))
